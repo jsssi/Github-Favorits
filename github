@@ -1,0 +1,96 @@
+//html//
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>GitHub Favorites</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>GitHub Favorites</h1>
+      <div>
+        <label  class="sr-only  " for="input-user">usuarios GitHub</label>
+        <input id="input-user" type="text" placeholder="usuarios GitHub">
+        <button id="btn-search">&plus;</button>
+      </div>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Repositorio</th>
+          <th>Seguidores</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img src="https://github.com/jsssi.png" alt="user-png">
+            <a href="https://github.com/jsssi"></a>
+            <p>jefferson souza</p>
+            <span>jsssi</span>
+          </td>
+          <td>10</td>
+          <td>0</td>
+          <td><button>&times;</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
+
+//css//
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+  --ff-primary:'Poppins', sans-serif;
+  --text-color:#303030;
+  --hue :194;
+  --primary-color: hsl(var(--hue),100% , 63%);
+}
+body{
+  color: var(--text-color);
+}
+body *{
+  font-family: var(--ff-primary);
+}
+button{
+  background-color: var(--primary-color);
+}
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+#app{
+  padding: 2.0rem;
+  max-width: 500px;
+  margin: 0 auto;   
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//instalar lite server local 
